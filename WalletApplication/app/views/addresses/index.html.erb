@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Addresses</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Family Name</th>
+      <th>Address Line 1</th>
+      <th>Address Line 2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>County</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @addresses.each do |address| %>
+      <tr>
+        <td><%= address.FamilyID %></td>
+        <td><%= address.AddressLine1 %></td>
+        <td><%= address.AddressLine2 %></td>
+        <td><%= address.City %></td>
+        <td><%= address.State %></td>
+        <td><%= address.ZIP %></td>
+        <td><%= address.County %></td>
+        <td><%= link_to 'Show', address, class:'btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_address_path(address), class:'btn btn-primary' %></td>
+        <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-primary' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', users_path, class: 'btn btn-primary' %>

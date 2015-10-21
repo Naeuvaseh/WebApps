@@ -1,0 +1,46 @@
+<%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="field">
+          <%= f.label :FirstName, 'First Name:', class: 'h4' %><br>
+          <%= f.text_field :FirstName, class: 'form-control', placeholder: 'Frank' %>
+        </div>
+        <div class="field">
+          <%= f.label :LastName, 'Last Name:', class: 'h4' %><br>
+          <%= f.text_field :LastName, class: 'form-control', placeholder: 'Underwood' %>
+        </div>
+        <div class="field">
+          <%= f.label :Occupation, 'Occupation:', class: 'h4' %><br>
+          <%= f.text_field :Occupation, class: 'form-control', placeholder: 'Evil Mastermind' %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="field">
+          <%= f.label :Relationship, 'Relationship:', class: 'h4' %><br>
+          <%= f.select(:Relationship, ['Mother', 'Father', 'Son', 'Sister', 'Nephew', 'Niece'], {include_blank: 'Select an option'}, {:class => 'form-control'}) %>
+        </div>
+        <div class="field">
+          <%= f.label :FamilyID, 'Family Name:', class: 'h4' %><br>
+          <%= f.text_field :FamilyID, class: 'form-control', placeholder: 'Team Awesome' %>
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <div class="actions">
+      <%= link_to 'Back', users_path, class: 'btn btn-primary pull-left' %>
+      <%= f.submit 'Submit', class: 'btn btn-primary pull-right' %>
+    </div>
+
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Date: 2015-10-11 15:24:24
+  Amount: 9.99
+  Details: MyString
+  Category_id: 
+  Account_id: 
+
+two:
+  Date: 2015-10-11 15:24:24
+  Amount: 9.99
+  Details: MyString
+  Category_id: 
+  Account_id: 

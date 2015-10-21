@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2><%= @account.Name %>
+      <small>(<%= @account.Number %>)</small>
+    </h2>
+  </div>
+
+  <div class="panel-body">
+    <table class="table table-responsive table-hover">
+      <thead>
+      <tr>
+        <td>Date</td>
+        <td>Details</td>
+        <td>Amount</td>
+      </tr>
+      </thead>
+      <tbody>
+      <% @account.transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.Date %></td>
+            <td><%= transaction.Details %></td>
+            <td><%= transaction.Amount %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+

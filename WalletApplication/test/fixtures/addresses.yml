@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FamilyID: MyString
+  AddressLine1: MyString
+  AddressLine2: MyString
+  City: MyString
+  State: MyString
+  ZIP: MyString
+  County: MyString
+
+two:
+  FamilyID: MyString
+  AddressLine1: MyString
+  AddressLine2: MyString
+  City: MyString
+  State: MyString
+  ZIP: MyString
+  County: MyString
